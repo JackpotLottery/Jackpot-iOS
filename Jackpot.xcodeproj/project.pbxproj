@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		1C02DE731F24341C0069915B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE721F24341C0069915B /* AppDelegate.swift */; };
-		1C02DE751F24341C0069915B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE741F24341C0069915B /* FirstViewController.swift */; };
-		1C02DE771F24341C0069915B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE761F24341C0069915B /* SecondViewController.swift */; };
+		1C02DE751F24341C0069915B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE741F24341C0069915B /* ExploreViewController.swift */; };
+		1C02DE771F24341C0069915B /* PendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE761F24341C0069915B /* PendingViewController.swift */; };
 		1C02DE7A1F24341C0069915B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C02DE781F24341C0069915B /* Main.storyboard */; };
 		1C02DE7C1F24341C0069915B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C02DE7B1F24341C0069915B /* Assets.xcassets */; };
 		1C02DE7F1F24341C0069915B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C02DE7D1F24341C0069915B /* LaunchScreen.storyboard */; };
 		1C02DE8A1F24341C0069915B /* JackpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE891F24341C0069915B /* JackpotTests.swift */; };
+		1C02DE951F2435640069915B /* AcceptedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE941F2435640069915B /* AcceptedViewController.swift */; };
+		1C02DE971F24358A0069915B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE961F24358A0069915B /* ProfileViewController.swift */; };
+		1C02DE9D1F243E730069915B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE9C1F243E730069915B /* TabBarViewController.swift */; };
+		1C02DE9F1F243EBF0069915B /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE9E1F243EBF0069915B /* Authentication.swift */; };
+		1C02DEA21F243F1A0069915B /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1C02DEA11F243F1A0069915B /* TODO.txt */; };
+		1C02DEA41F2441A70069915B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEA31F2441A70069915B /* User.swift */; };
+		1C02DEA61F244C0E0069915B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEA51F244C0E0069915B /* LoginViewController.swift */; };
+		1C02DEA81F24513B0069915B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEA71F24513B0069915B /* UIViewExtension.swift */; };
+		1C02DEAC1F245D090069915B /* JPHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEAB1F245D090069915B /* JPHttpClient.swift */; };
+		1C02DEAF1F245D6F0069915B /* AuthenticationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEAE1F245D6F0069915B /* AuthenticationDTO.swift */; };
+		3A203C77D0ED4376CA627359 /* Pods_JackpotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47AD67CA846AC3FAA1E00AD7 /* Pods_JackpotTests.framework */; };
+		F0F61507CB7D58C22EC58402 /* Pods_Jackpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A50CF5089F85A0A747637C9 /* Pods_Jackpot.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A50CF5089F85A0A747637C9 /* Pods_Jackpot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jackpot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C02DE6F1F24341C0069915B /* Jackpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jackpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C02DE721F24341C0069915B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C02DE741F24341C0069915B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		1C02DE761F24341C0069915B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1C02DE741F24341C0069915B /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		1C02DE761F24341C0069915B /* PendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingViewController.swift; sourceTree = "<group>"; };
 		1C02DE791F24341C0069915B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C02DE7B1F24341C0069915B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C02DE7E1F24341C0069915B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +51,22 @@
 		1C02DE851F24341C0069915B /* JackpotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JackpotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C02DE891F24341C0069915B /* JackpotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackpotTests.swift; sourceTree = "<group>"; };
 		1C02DE8B1F24341C0069915B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C02DE941F2435640069915B /* AcceptedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedViewController.swift; sourceTree = "<group>"; };
+		1C02DE961F24358A0069915B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1C02DE9C1F243E730069915B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1C02DE9E1F243EBF0069915B /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		1C02DEA11F243F1A0069915B /* TODO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		1C02DEA31F2441A70069915B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1C02DEA51F244C0E0069915B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1C02DEA71F24513B0069915B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		1C02DEAA1F245C660069915B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		1C02DEAB1F245D090069915B /* JPHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPHttpClient.swift; sourceTree = "<group>"; };
+		1C02DEAE1F245D6F0069915B /* AuthenticationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDTO.swift; sourceTree = "<group>"; };
+		1F960D45400F3577CF6843DC /* Pods-Jackpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackpot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jackpot/Pods-Jackpot.debug.xcconfig"; sourceTree = "<group>"; };
+		22BA640684B7E0DA4C307478 /* Pods-JackpotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackpotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackpotTests/Pods-JackpotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		47AD67CA846AC3FAA1E00AD7 /* Pods_JackpotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackpotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63CC9F8AD1171DC02C0D8075 /* Pods-JackpotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackpotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JackpotTests/Pods-JackpotTests.release.xcconfig"; sourceTree = "<group>"; };
+		75B0F194E72E39DE5F0821A8 /* Pods-Jackpot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackpot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jackpot/Pods-Jackpot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F61507CB7D58C22EC58402 /* Pods_Jackpot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A203C77D0ED4376CA627359 /* Pods_JackpotTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,9 +92,12 @@
 		1C02DE661F24341B0069915B = {
 			isa = PBXGroup;
 			children = (
+				1C02DEAA1F245C660069915B /* Podfile */,
 				1C02DE711F24341C0069915B /* Jackpot */,
 				1C02DE881F24341C0069915B /* JackpotTests */,
 				1C02DE701F24341C0069915B /* Products */,
+				3BFD09A4B0FA723367DBCB05 /* Pods */,
+				3D0A0912FB6CC1745A5A6C8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +113,16 @@
 		1C02DE711F24341C0069915B /* Jackpot */ = {
 			isa = PBXGroup;
 			children = (
+				1C02DEA91F24560F0069915B /* Extensions */,
+				1C02DEA01F243EE90069915B /* Models */,
+				1C02DE991F2439B40069915B /* Utilities */,
+				1C02DE981F2439980069915B /* ViewControllers */,
 				1C02DE721F24341C0069915B /* AppDelegate.swift */,
-				1C02DE741F24341C0069915B /* FirstViewController.swift */,
-				1C02DE761F24341C0069915B /* SecondViewController.swift */,
 				1C02DE781F24341C0069915B /* Main.storyboard */,
 				1C02DE7B1F24341C0069915B /* Assets.xcassets */,
 				1C02DE7D1F24341C0069915B /* LaunchScreen.storyboard */,
 				1C02DE801F24341C0069915B /* Info.plist */,
+				1C02DEA11F243F1A0069915B /* TODO.txt */,
 			);
 			path = Jackpot;
 			sourceTree = "<group>";
@@ -99,6 +136,73 @@
 			path = JackpotTests;
 			sourceTree = "<group>";
 		};
+		1C02DE981F2439980069915B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C02DE961F24358A0069915B /* ProfileViewController.swift */,
+				1C02DE741F24341C0069915B /* ExploreViewController.swift */,
+				1C02DE761F24341C0069915B /* PendingViewController.swift */,
+				1C02DE941F2435640069915B /* AcceptedViewController.swift */,
+				1C02DE9C1F243E730069915B /* TabBarViewController.swift */,
+				1C02DEA51F244C0E0069915B /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1C02DE991F2439B40069915B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1C02DE9E1F243EBF0069915B /* Authentication.swift */,
+				1C02DEAB1F245D090069915B /* JPHttpClient.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1C02DEA01F243EE90069915B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C02DEAD1F245D610069915B /* DTOs */,
+				1C02DEA31F2441A70069915B /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1C02DEA91F24560F0069915B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1C02DEA71F24513B0069915B /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1C02DEAD1F245D610069915B /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				1C02DEAE1F245D6F0069915B /* AuthenticationDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		3BFD09A4B0FA723367DBCB05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F960D45400F3577CF6843DC /* Pods-Jackpot.debug.xcconfig */,
+				75B0F194E72E39DE5F0821A8 /* Pods-Jackpot.release.xcconfig */,
+				22BA640684B7E0DA4C307478 /* Pods-JackpotTests.debug.xcconfig */,
+				63CC9F8AD1171DC02C0D8075 /* Pods-JackpotTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3D0A0912FB6CC1745A5A6C8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A50CF5089F85A0A747637C9 /* Pods_Jackpot.framework */,
+				47AD67CA846AC3FAA1E00AD7 /* Pods_JackpotTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C02DE8E1F24341C0069915B /* Build configuration list for PBXNativeTarget "Jackpot" */;
 			buildPhases = (
+				66681048CF4F80E8E7C2E2CC /* [CP] Check Pods Manifest.lock */,
 				1C02DE6B1F24341C0069915B /* Sources */,
 				1C02DE6C1F24341C0069915B /* Frameworks */,
 				1C02DE6D1F24341C0069915B /* Resources */,
+				79BB282635FEEBAFD5D2BDE0 /* [CP] Embed Pods Frameworks */,
+				2FDCDB3B8D2887F973842B2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C02DE911F24341C0069915B /* Build configuration list for PBXNativeTarget "JackpotTests" */;
 			buildPhases = (
+				77E12FF82C04A807AECCC783 /* [CP] Check Pods Manifest.lock */,
 				1C02DE811F24341C0069915B /* Sources */,
 				1C02DE821F24341C0069915B /* Frameworks */,
 				1C02DE831F24341C0069915B /* Resources */,
+				A3A1E458C968A290C03313BF /* [CP] Embed Pods Frameworks */,
+				CE9BD2FF770A55126A003D9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C02DEA21F243F1A0069915B /* TODO.txt in Resources */,
 				1C02DE7F1F24341C0069915B /* LaunchScreen.storyboard in Resources */,
 				1C02DE7C1F24341C0069915B /* Assets.xcassets in Resources */,
 				1C02DE7A1F24341C0069915B /* Main.storyboard in Resources */,
@@ -195,14 +306,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2FDCDB3B8D2887F973842B2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jackpot/Pods-Jackpot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66681048CF4F80E8E7C2E2CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77E12FF82C04A807AECCC783 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79BB282635FEEBAFD5D2BDE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jackpot/Pods-Jackpot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A1E458C968A290C03313BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackpotTests/Pods-JackpotTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE9BD2FF770A55126A003D9B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackpotTests/Pods-JackpotTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1C02DE6B1F24341C0069915B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C02DE771F24341C0069915B /* SecondViewController.swift in Sources */,
+				1C02DEA81F24513B0069915B /* UIViewExtension.swift in Sources */,
+				1C02DEA61F244C0E0069915B /* LoginViewController.swift in Sources */,
+				1C02DE9F1F243EBF0069915B /* Authentication.swift in Sources */,
+				1C02DE771F24341C0069915B /* PendingViewController.swift in Sources */,
 				1C02DE731F24341C0069915B /* AppDelegate.swift in Sources */,
-				1C02DE751F24341C0069915B /* FirstViewController.swift in Sources */,
+				1C02DEAF1F245D6F0069915B /* AuthenticationDTO.swift in Sources */,
+				1C02DEAC1F245D090069915B /* JPHttpClient.swift in Sources */,
+				1C02DE971F24358A0069915B /* ProfileViewController.swift in Sources */,
+				1C02DEA41F2441A70069915B /* User.swift in Sources */,
+				1C02DE751F24341C0069915B /* ExploreViewController.swift in Sources */,
+				1C02DE9D1F243E730069915B /* TabBarViewController.swift in Sources */,
+				1C02DE951F2435640069915B /* AcceptedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +562,7 @@
 		};
 		1C02DE8F1F24341C0069915B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F960D45400F3577CF6843DC /* Pods-Jackpot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZATXB6RXLN;
@@ -363,6 +577,7 @@
 		};
 		1C02DE901F24341C0069915B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75B0F194E72E39DE5F0821A8 /* Pods-Jackpot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZATXB6RXLN;
@@ -377,6 +592,7 @@
 		};
 		1C02DE921F24341C0069915B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22BA640684B7E0DA4C307478 /* Pods-JackpotTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -393,6 +609,7 @@
 		};
 		1C02DE931F24341C0069915B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63CC9F8AD1171DC02C0D8075 /* Pods-JackpotTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -426,6 +643,7 @@
 				1C02DE901F24341C0069915B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C02DE911F24341C0069915B /* Build configuration list for PBXNativeTarget "JackpotTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +652,7 @@
 				1C02DE931F24341C0069915B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

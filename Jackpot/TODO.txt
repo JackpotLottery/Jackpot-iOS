@@ -1,0 +1,3 @@
+
+Login screen:
+    Next and Done on keyboard should navigate the text field and submit the request.

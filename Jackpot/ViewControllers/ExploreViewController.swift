@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  ExploreViewController.swift
 //  Jackpot
 //
 //  Created by bradley treuherz on 7/22/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ExploreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

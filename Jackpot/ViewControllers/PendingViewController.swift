@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  PendingViewController.swift
 //  Jackpot
 //
 //  Created by bradley treuherz on 7/22/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class PendingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

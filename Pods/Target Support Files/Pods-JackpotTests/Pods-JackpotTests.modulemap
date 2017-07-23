@@ -1,0 +1,6 @@
+framework module Pods_JackpotTests {
+  umbrella header "Pods-JackpotTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
