@@ -38,6 +38,7 @@ extension ProfileViewModel: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
         let view = UIView()
+        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
         let label = UILabel(frame: CGRect(x: 10, y: 20, width: tableView.bounds.width - 10, height: 30))
         label.font = UIFont(name: "Helvetica-Bold", size: 24)
         label.textAlignment = .left
