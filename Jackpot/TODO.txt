@@ -1,6 +1,7 @@
 
 Login screen:
     Next and Done on keyboard should navigate the text field and submit the request.
+    Put a mutex on the thing that launches the login page.. don't want it getting launched more than once
 
 Profile Page:
     GroupTableViewCell will not resize if description is long.
@@ -8,3 +9,5 @@ Profile Page:
     Create group button does nothing.
 
 
+Models
+    Should probably make all properties optionals

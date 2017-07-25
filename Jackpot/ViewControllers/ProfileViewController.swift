@@ -41,6 +41,8 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         // Load the data
         viewModel.fetchData()
         profileTableView.reloadData()

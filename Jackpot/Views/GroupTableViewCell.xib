@@ -26,9 +26,9 @@
                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7jM-ay-Vwj">
                         <rect key="frame" x="0.0" y="-23" width="320" height="128"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNt-sm-NzD">
-                                <rect key="frame" x="72" y="18" width="53.5" height="21"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNt-sm-NzD">
+                                <rect key="frame" x="79" y="18" width="231" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -58,19 +58,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjN-8G-uV7">
-                                <rect key="frame" x="72" y="47" width="85.5" height="21"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjN-8G-uV7">
+                                <rect key="frame" x="79" y="47" width="231" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WNt-sm-NzD" secondAttribute="trailing" constant="10" id="5CK-VI-8d7"/>
                             <constraint firstItem="fIq-Bq-RYs" firstAttribute="leading" secondItem="7jM-ay-Vwj" secondAttribute="leading" constant="10" id="6l8-07-Ghm"/>
                             <constraint firstItem="fIq-Bq-RYs" firstAttribute="centerY" secondItem="7jM-ay-Vwj" secondAttribute="centerY" id="CEV-4A-bqn"/>
                             <constraint firstItem="fjN-8G-uV7" firstAttribute="top" secondItem="WNt-sm-NzD" secondAttribute="bottom" constant="4" id="D65-d4-51A"/>
                             <constraint firstItem="WNt-sm-NzD" firstAttribute="top" secondItem="7jM-ay-Vwj" secondAttribute="top" constant="12" id="JLT-y4-JCn"/>
                             <constraint firstItem="fjN-8G-uV7" firstAttribute="leading" secondItem="fIq-Bq-RYs" secondAttribute="trailing" constant="15" id="Kaf-wH-72J"/>
+                            <constraint firstAttribute="trailing" secondItem="fjN-8G-uV7" secondAttribute="trailing" constant="10" id="REL-Fr-kSW"/>
                             <constraint firstAttribute="height" constant="74" id="XRg-3f-fFe"/>
                             <constraint firstItem="WNt-sm-NzD" firstAttribute="leading" secondItem="fIq-Bq-RYs" secondAttribute="trailing" constant="15" id="ZwM-bs-mSM"/>
                         </constraints>

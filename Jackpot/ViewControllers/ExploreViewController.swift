@@ -9,10 +9,62 @@
 import UIKit
 
 class ExploreViewController: UIViewController {
-
+    
+    // MARK: Properties
+    @IBOutlet weak var collectionView: UICollectionView!
+    var events = [Event]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        collectionView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Load the data
+        fetchData()
+        collectionView.reloadData()
+    }
+    
+    private func fetchData(){
+        // TODO: Make a network request
+        events = [Event(_id: "0",
+                         name: "A fun event!",
+                         eventDescription: "Event Description",
+                         groupName: "Super fun group",
+                         location: "1234 W Road St, Seattle, WA, 89716",
+                         date: NSDate(),
+                         expirationDate: NSDate(),
+                         capacity: 50,
+                         requestedUsers: [String](),
+                         acceptedUsers: [String](),
+                         tag: "Sounders"),
+                  Event(_id: "0",
+                        name: "A fun event!",
+                        eventDescription: "Event Description",
+                        groupName: "Super fun group",
+                        location: "1234 W Road St, Seattle, WA, 89716",
+                        date: NSDate(),
+                        expirationDate: NSDate(),
+                        capacity: 50,
+                        requestedUsers: [String](),
+                        acceptedUsers: [String](),
+                        tag: "Sounders"),
+                  Event(_id: "0",
+                        name: "A fun event!",
+                        eventDescription: "Event Description",
+                        groupName: "Super fun group",
+                        location: "1234 W Road St, Seattle, WA, 89716",
+                        date: NSDate(),
+                        expirationDate: NSDate(),
+                        capacity: 50,
+                        requestedUsers: [String](),
+                        acceptedUsers: [String](),
+                        tag: "Sounders")
+                  
+        ]
+        
     }
 
     override func didReceiveMemoryWarning() {

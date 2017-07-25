@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C028B991F270C8D00517033 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C028B981F270C8D00517033 /* Event.swift */; };
 		1C02DE731F24341C0069915B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE721F24341C0069915B /* AppDelegate.swift */; };
 		1C02DE751F24341C0069915B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE741F24341C0069915B /* ExploreViewController.swift */; };
 		1C02DE771F24341C0069915B /* PendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DE761F24341C0069915B /* PendingViewController.swift */; };
@@ -24,6 +25,8 @@
 		1C02DEA81F24513B0069915B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEA71F24513B0069915B /* UIViewExtension.swift */; };
 		1C02DEAC1F245D090069915B /* JPHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEAB1F245D090069915B /* JPHttpClient.swift */; };
 		1C02DEAF1F245D6F0069915B /* AuthenticationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEAE1F245D6F0069915B /* AuthenticationDTO.swift */; };
+		1C23A1731F27150C005BC8CE /* ExploreViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23A1721F27150C005BC8CE /* ExploreViewControllerExtensions.swift */; };
+		1C47C9421F27117B00D6316F /* ExploreEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C47C9411F27117B00D6316F /* ExploreEventCollectionViewCell.swift */; };
 		1C8E393C1F26A612001388A4 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E393B1F26A611001388A4 /* Group.swift */; };
 		1C8E393E1F26ACB2001388A4 /* ProfileViewModelItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E393D1F26ACB2001388A4 /* ProfileViewModelItemType.swift */; };
 		1C8E39401F26ADA5001388A4 /* ProfileViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E393F1F26ADA5001388A4 /* ProfileViewModelItem.swift */; };
@@ -53,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		0A50CF5089F85A0A747637C9 /* Pods_Jackpot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jackpot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C028B981F270C8D00517033 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		1C02DE6F1F24341C0069915B /* Jackpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jackpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C02DE721F24341C0069915B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C02DE741F24341C0069915B /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		1C02DEAA1F245C660069915B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		1C02DEAB1F245D090069915B /* JPHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPHttpClient.swift; sourceTree = "<group>"; };
 		1C02DEAE1F245D6F0069915B /* AuthenticationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDTO.swift; sourceTree = "<group>"; };
+		1C23A1721F27150C005BC8CE /* ExploreViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewControllerExtensions.swift; sourceTree = "<group>"; };
+		1C47C9411F27117B00D6316F /* ExploreEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C8E393B1F26A611001388A4 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		1C8E393D1F26ACB2001388A4 /* ProfileViewModelItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelItemType.swift; sourceTree = "<group>"; };
 		1C8E393F1F26ADA5001388A4 /* ProfileViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelItem.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 				1C02DEAD1F245D610069915B /* DTOs */,
 				1C02DEA31F2441A70069915B /* User.swift */,
 				1C8E393B1F26A611001388A4 /* Group.swift */,
+				1C028B981F270C8D00517033 /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,6 +210,7 @@
 				1C02DEA71F24513B0069915B /* UIViewExtension.swift */,
 				1C8E39411F26AE51001388A4 /* ProfileViewModelItemExtension.swift */,
 				1C8E395E1F26C50E001388A4 /* ProfileViewModelExtension.swift */,
+				1C23A1721F27150C005BC8CE /* ExploreViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 				1C8E39571F26BE5C001388A4 /* UserInfoTableViewCell.xib */,
 				1C8E395A1F26C058001388A4 /* GroupTableViewCell.swift */,
 				1C8E395B1F26C058001388A4 /* GroupTableViewCell.xib */,
+				1C47C9411F27117B00D6316F /* ExploreEventCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -471,12 +480,14 @@
 			files = (
 				1C8E39441F26AECE001388A4 /* ProfileViewModelUserInfoItem.swift in Sources */,
 				1C02DEA81F24513B0069915B /* UIViewExtension.swift in Sources */,
+				1C23A1731F27150C005BC8CE /* ExploreViewControllerExtensions.swift in Sources */,
 				1C8E39401F26ADA5001388A4 /* ProfileViewModelItem.swift in Sources */,
 				1C02DEA61F244C0E0069915B /* LoginViewController.swift in Sources */,
 				1C8E39581F26BE5C001388A4 /* UserInfoTableViewCell.swift in Sources */,
 				1C02DE9F1F243EBF0069915B /* Authentication.swift in Sources */,
 				1C02DE771F24341C0069915B /* PendingViewController.swift in Sources */,
 				1C02DE731F24341C0069915B /* AppDelegate.swift in Sources */,
+				1C47C9421F27117B00D6316F /* ExploreEventCollectionViewCell.swift in Sources */,
 				1C02DEAF1F245D6F0069915B /* AuthenticationDTO.swift in Sources */,
 				1C02DEAC1F245D090069915B /* JPHttpClient.swift in Sources */,
 				1C8E395C1F26C058001388A4 /* GroupTableViewCell.swift in Sources */,
@@ -485,6 +496,7 @@
 				1C8E395F1F26C50E001388A4 /* ProfileViewModelExtension.swift in Sources */,
 				1C02DEA41F2441A70069915B /* User.swift in Sources */,
 				1C9746DB1F267274009AD854 /* SignupViewController.swift in Sources */,
+				1C028B991F270C8D00517033 /* Event.swift in Sources */,
 				1C8E39421F26AE51001388A4 /* ProfileViewModelItemExtension.swift in Sources */,
 				1C8E39491F26B0AA001388A4 /* ProfileViewModel.swift in Sources */,
 				1C8E393E1F26ACB2001388A4 /* ProfileViewModelItemType.swift in Sources */,
