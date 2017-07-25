@@ -23,6 +23,6 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidAppear(_ animated: Bool) {
         // Ensure the user is authenticated
-        Authentication.verifyIsLoggedIn(self);
+        Authentication.verifyIsLoggedIn(self, complete: nil);
     }
 }

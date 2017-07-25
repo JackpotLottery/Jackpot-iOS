@@ -17,7 +17,7 @@ class Authentication: NSObject {
     static var httpClient: JPHttpClient = JPHttpClient()
     
     // Public Methods
-    static func verifyIsLoggedIn(_ viewController: UIViewController){
+    static func verifyIsLoggedIn(_ viewController: UIViewController, complete: (() -> Void)?){
         user = getUser()
         if let user = user {
             // We have a User object... Check if the user has a valid token.
@@ -30,8 +30,9 @@ class Authentication: NSObject {
             }
         } else{
             // We have no user... launch login page.
-            let loginViewController = viewController.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as UIViewController
-            viewController.present(loginViewController, animated:true, completion: nil)
+            let loginViewController = viewController.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            loginViewController.onComplete = complete
+            viewController.present(loginViewController, animated:true, completion: complete)
         }
     }
     
@@ -43,7 +44,8 @@ class Authentication: NSObject {
                 return
             }
             
-            // The request failed show the login page
+            // The request failed. Clear user info and show the login page
+            logout()
             let loginViewController = viewController.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as UIViewController
             viewController.present(loginViewController, animated:true, completion: nil)
         })

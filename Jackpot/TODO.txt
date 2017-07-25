@@ -1,3 +1,10 @@
 
 Login screen:
     Next and Done on keyboard should navigate the text field and submit the request.
+
+Profile Page:
+    GroupTableViewCell will not resize if description is long.
+    GetGroups Endpoint.
+    Create group button does nothing.
+
+

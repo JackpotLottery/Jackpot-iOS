@@ -24,6 +24,19 @@
 		1C02DEA81F24513B0069915B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEA71F24513B0069915B /* UIViewExtension.swift */; };
 		1C02DEAC1F245D090069915B /* JPHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEAB1F245D090069915B /* JPHttpClient.swift */; };
 		1C02DEAF1F245D6F0069915B /* AuthenticationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02DEAE1F245D6F0069915B /* AuthenticationDTO.swift */; };
+		1C8E393C1F26A612001388A4 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E393B1F26A611001388A4 /* Group.swift */; };
+		1C8E393E1F26ACB2001388A4 /* ProfileViewModelItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E393D1F26ACB2001388A4 /* ProfileViewModelItemType.swift */; };
+		1C8E39401F26ADA5001388A4 /* ProfileViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E393F1F26ADA5001388A4 /* ProfileViewModelItem.swift */; };
+		1C8E39421F26AE51001388A4 /* ProfileViewModelItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E39411F26AE51001388A4 /* ProfileViewModelItemExtension.swift */; };
+		1C8E39441F26AECE001388A4 /* ProfileViewModelUserInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E39431F26AECE001388A4 /* ProfileViewModelUserInfoItem.swift */; };
+		1C8E39461F26AFCF001388A4 /* ProfileViewModelGroupItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E39451F26AFCF001388A4 /* ProfileViewModelGroupItem.swift */; };
+		1C8E39491F26B0AA001388A4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E39481F26B0AA001388A4 /* ProfileViewModel.swift */; };
+		1C8E39581F26BE5C001388A4 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E39561F26BE5C001388A4 /* UserInfoTableViewCell.swift */; };
+		1C8E39591F26BE5C001388A4 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C8E39571F26BE5C001388A4 /* UserInfoTableViewCell.xib */; };
+		1C8E395C1F26C058001388A4 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E395A1F26C058001388A4 /* GroupTableViewCell.swift */; };
+		1C8E395D1F26C058001388A4 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C8E395B1F26C058001388A4 /* GroupTableViewCell.xib */; };
+		1C8E395F1F26C50E001388A4 /* ProfileViewModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E395E1F26C50E001388A4 /* ProfileViewModelExtension.swift */; };
+		1C9746DB1F267274009AD854 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9746DA1F267274009AD854 /* SignupViewController.swift */; };
 		3A203C77D0ED4376CA627359 /* Pods_JackpotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47AD67CA846AC3FAA1E00AD7 /* Pods_JackpotTests.framework */; };
 		F0F61507CB7D58C22EC58402 /* Pods_Jackpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A50CF5089F85A0A747637C9 /* Pods_Jackpot.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +75,19 @@
 		1C02DEAA1F245C660069915B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		1C02DEAB1F245D090069915B /* JPHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPHttpClient.swift; sourceTree = "<group>"; };
 		1C02DEAE1F245D6F0069915B /* AuthenticationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDTO.swift; sourceTree = "<group>"; };
+		1C8E393B1F26A611001388A4 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		1C8E393D1F26ACB2001388A4 /* ProfileViewModelItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelItemType.swift; sourceTree = "<group>"; };
+		1C8E393F1F26ADA5001388A4 /* ProfileViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelItem.swift; sourceTree = "<group>"; };
+		1C8E39411F26AE51001388A4 /* ProfileViewModelItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelItemExtension.swift; sourceTree = "<group>"; };
+		1C8E39431F26AECE001388A4 /* ProfileViewModelUserInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelUserInfoItem.swift; sourceTree = "<group>"; };
+		1C8E39451F26AFCF001388A4 /* ProfileViewModelGroupItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelGroupItem.swift; sourceTree = "<group>"; };
+		1C8E39481F26B0AA001388A4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		1C8E39561F26BE5C001388A4 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		1C8E39571F26BE5C001388A4 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
+		1C8E395A1F26C058001388A4 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		1C8E395B1F26C058001388A4 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
+		1C8E395E1F26C50E001388A4 /* ProfileViewModelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelExtension.swift; sourceTree = "<group>"; };
+		1C9746DA1F267274009AD854 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		1F960D45400F3577CF6843DC /* Pods-Jackpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackpot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jackpot/Pods-Jackpot.debug.xcconfig"; sourceTree = "<group>"; };
 		22BA640684B7E0DA4C307478 /* Pods-JackpotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackpotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackpotTests/Pods-JackpotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47AD67CA846AC3FAA1E00AD7 /* Pods_JackpotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackpotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +139,8 @@
 		1C02DE711F24341C0069915B /* Jackpot */ = {
 			isa = PBXGroup;
 			children = (
+				1C8E394D1F26B683001388A4 /* Views */,
+				1C8E39471F26B082001388A4 /* ViewModels */,
 				1C02DEA91F24560F0069915B /* Extensions */,
 				1C02DEA01F243EE90069915B /* Models */,
 				1C02DE991F2439B40069915B /* Utilities */,
@@ -145,6 +173,7 @@
 				1C02DE941F2435640069915B /* AcceptedViewController.swift */,
 				1C02DE9C1F243E730069915B /* TabBarViewController.swift */,
 				1C02DEA51F244C0E0069915B /* LoginViewController.swift */,
+				1C9746DA1F267274009AD854 /* SignupViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,6 +192,7 @@
 			children = (
 				1C02DEAD1F245D610069915B /* DTOs */,
 				1C02DEA31F2441A70069915B /* User.swift */,
+				1C8E393B1F26A611001388A4 /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				1C02DEA71F24513B0069915B /* UIViewExtension.swift */,
+				1C8E39411F26AE51001388A4 /* ProfileViewModelItemExtension.swift */,
+				1C8E395E1F26C50E001388A4 /* ProfileViewModelExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +213,37 @@
 				1C02DEAE1F245D6F0069915B /* AuthenticationDTO.swift */,
 			);
 			path = DTOs;
+			sourceTree = "<group>";
+		};
+		1C8E39471F26B082001388A4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1C8E394A1F26B0AF001388A4 /* Profile */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1C8E394A1F26B0AF001388A4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1C8E393D1F26ACB2001388A4 /* ProfileViewModelItemType.swift */,
+				1C8E393F1F26ADA5001388A4 /* ProfileViewModelItem.swift */,
+				1C8E39431F26AECE001388A4 /* ProfileViewModelUserInfoItem.swift */,
+				1C8E39451F26AFCF001388A4 /* ProfileViewModelGroupItem.swift */,
+				1C8E39481F26B0AA001388A4 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1C8E394D1F26B683001388A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C8E39561F26BE5C001388A4 /* UserInfoTableViewCell.swift */,
+				1C8E39571F26BE5C001388A4 /* UserInfoTableViewCell.xib */,
+				1C8E395A1F26C058001388A4 /* GroupTableViewCell.swift */,
+				1C8E395B1F26C058001388A4 /* GroupTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3BFD09A4B0FA723367DBCB05 /* Pods */ = {
@@ -290,6 +353,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8E39591F26BE5C001388A4 /* UserInfoTableViewCell.xib in Resources */,
+				1C8E395D1F26C058001388A4 /* GroupTableViewCell.xib in Resources */,
 				1C02DEA21F243F1A0069915B /* TODO.txt in Resources */,
 				1C02DE7F1F24341C0069915B /* LaunchScreen.storyboard in Resources */,
 				1C02DE7C1F24341C0069915B /* Assets.xcassets in Resources */,
@@ -404,18 +469,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8E39441F26AECE001388A4 /* ProfileViewModelUserInfoItem.swift in Sources */,
 				1C02DEA81F24513B0069915B /* UIViewExtension.swift in Sources */,
+				1C8E39401F26ADA5001388A4 /* ProfileViewModelItem.swift in Sources */,
 				1C02DEA61F244C0E0069915B /* LoginViewController.swift in Sources */,
+				1C8E39581F26BE5C001388A4 /* UserInfoTableViewCell.swift in Sources */,
 				1C02DE9F1F243EBF0069915B /* Authentication.swift in Sources */,
 				1C02DE771F24341C0069915B /* PendingViewController.swift in Sources */,
 				1C02DE731F24341C0069915B /* AppDelegate.swift in Sources */,
 				1C02DEAF1F245D6F0069915B /* AuthenticationDTO.swift in Sources */,
 				1C02DEAC1F245D090069915B /* JPHttpClient.swift in Sources */,
+				1C8E395C1F26C058001388A4 /* GroupTableViewCell.swift in Sources */,
+				1C8E393C1F26A612001388A4 /* Group.swift in Sources */,
 				1C02DE971F24358A0069915B /* ProfileViewController.swift in Sources */,
+				1C8E395F1F26C50E001388A4 /* ProfileViewModelExtension.swift in Sources */,
 				1C02DEA41F2441A70069915B /* User.swift in Sources */,
+				1C9746DB1F267274009AD854 /* SignupViewController.swift in Sources */,
+				1C8E39421F26AE51001388A4 /* ProfileViewModelItemExtension.swift in Sources */,
+				1C8E39491F26B0AA001388A4 /* ProfileViewModel.swift in Sources */,
+				1C8E393E1F26ACB2001388A4 /* ProfileViewModelItemType.swift in Sources */,
 				1C02DE751F24341C0069915B /* ExploreViewController.swift in Sources */,
 				1C02DE9D1F243E730069915B /* TabBarViewController.swift in Sources */,
 				1C02DE951F2435640069915B /* AcceptedViewController.swift in Sources */,
+				1C8E39461F26AFCF001388A4 /* ProfileViewModelGroupItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +643,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZATXB6RXLN;
 				INFOPLIST_FILE = Jackpot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jackpot.lottery.Jackpot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -582,6 +659,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZATXB6RXLN;
 				INFOPLIST_FILE = Jackpot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jackpot.lottery.Jackpot;
 				PRODUCT_NAME = "$(TARGET_NAME)";

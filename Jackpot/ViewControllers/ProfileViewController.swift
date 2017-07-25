@@ -9,11 +9,41 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
+    // MARK: Properties
+    @IBOutlet weak var profileTableView: UITableView!
+    
+    // MARK: Actions
+    @IBAction func logoutButtonClicked(_ sender: UIButton) {
+        Authentication.logout()
+        Authentication.verifyIsLoggedIn(self, complete: onSignIn)
+    }
+    
+    private var viewModel: ProfileViewModel = ProfileViewModel()
+    
+    private func onSignIn(){
+        viewModel.fetchData()
+        profileTableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Register tableview cells
+        profileTableView.register(UINib(nibName: "UserInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "UserInfoTableViewCell")
+        profileTableView.register(UINib(nibName: "GroupTableViewCell", bundle: nil), forCellReuseIdentifier: "GroupTableViewCell")
+        
+        profileTableView.rowHeight = UITableViewAutomaticDimension
+        profileTableView.estimatedRowHeight = 140
+        
+        profileTableView.dataSource = viewModel
+        profileTableView.delegate = viewModel
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // Load the data
+        viewModel.fetchData()
+        profileTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +51,6 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
