@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
         let createGroupViewController = storyboard!.instantiateViewController(withIdentifier: "CreateGroupViewController") as! CreateGroupViewController
         
         createGroupViewController.onComplete = reloadData
-        present(createGroupViewController, animated:false, completion: nil)
+        present(createGroupViewController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

@@ -14,7 +14,19 @@ class ExploreViewController: UIViewController {
     var events = [Event]()
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
-    
+	
+		@IBAction func addEventButtonClicked(_ sender: Any) {
+			let createEventViewController = storyboard!.instantiateViewController(withIdentifier: "CreateEventViewController") as! CreateEventViewController
+			
+			createEventViewController.onComplete = reloadData
+			present(createEventViewController, animated: true, completion: nil)
+		}
+	
+		private func reloadData(){
+			fetchData()
+			collectionView.reloadData()
+		}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -25,8 +37,7 @@ class ExploreViewController: UIViewController {
         super.viewDidAppear(animated)
         
         // Load the data
-        fetchData()
-        collectionView.reloadData()
+        reloadData()
     }
     
     private func fetchData(){

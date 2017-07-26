@@ -45,6 +45,11 @@
 		1C8E395F1F26C50E001388A4 /* ProfileViewModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E395E1F26C50E001388A4 /* ProfileViewModelExtension.swift */; };
 		1C9746DB1F267274009AD854 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9746DA1F267274009AD854 /* SignupViewController.swift */; };
 		1CD3DDEB1F283BB600916CE3 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD3DDEA1F283BB600916CE3 /* CreateGroupViewController.swift */; };
+		272959CB1F2851EC00F843C9 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272959CA1F2851EC00F843C9 /* CreateEventViewController.swift */; };
+		27F865051F287DA40058DE9D /* PopDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F865041F287DA40058DE9D /* PopDatePicker.swift */; };
+		27F865081F287DAE0058DE9D /* PopDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F865061F287DAE0058DE9D /* PopDateViewController.swift */; };
+		27F865091F287DAE0058DE9D /* PopDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F865071F287DAE0058DE9D /* PopDateViewController.xib */; };
+		27F8650B1F287F5F0058DE9D /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8650A1F287F5F0058DE9D /* DateExtensions.swift */; };
 		3A203C77D0ED4376CA627359 /* Pods_JackpotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47AD67CA846AC3FAA1E00AD7 /* Pods_JackpotTests.framework */; };
 		F0F61507CB7D58C22EC58402 /* Pods_Jackpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A50CF5089F85A0A747637C9 /* Pods_Jackpot.framework */; };
 /* End PBXBuildFile section */
@@ -106,6 +111,11 @@
 		1CD3DDEA1F283BB600916CE3 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		1F960D45400F3577CF6843DC /* Pods-Jackpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackpot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jackpot/Pods-Jackpot.debug.xcconfig"; sourceTree = "<group>"; };
 		22BA640684B7E0DA4C307478 /* Pods-JackpotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackpotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackpotTests/Pods-JackpotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		272959CA1F2851EC00F843C9 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		27F865041F287DA40058DE9D /* PopDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopDatePicker.swift; path = "../../../../Downloads/PopDatePickerApp-master/PopDatePickerApp/PopDatePicker.swift"; sourceTree = "<group>"; };
+		27F865061F287DAE0058DE9D /* PopDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopDateViewController.swift; path = "../../../../Downloads/PopDatePickerApp-master/PopDatePickerApp/PopDateViewController.swift"; sourceTree = "<group>"; };
+		27F865071F287DAE0058DE9D /* PopDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopDateViewController.xib; path = "../../../../Downloads/PopDatePickerApp-master/PopDatePickerApp/PopDateViewController.xib"; sourceTree = "<group>"; };
+		27F8650A1F287F5F0058DE9D /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		47AD67CA846AC3FAA1E00AD7 /* Pods_JackpotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackpotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CC9F8AD1171DC02C0D8075 /* Pods-JackpotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackpotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JackpotTests/Pods-JackpotTests.release.xcconfig"; sourceTree = "<group>"; };
 		75B0F194E72E39DE5F0821A8 /* Pods-Jackpot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackpot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jackpot/Pods-Jackpot.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +165,7 @@
 		1C02DE711F24341C0069915B /* Jackpot */ = {
 			isa = PBXGroup;
 			children = (
+				27F865031F287D8E0058DE9D /* PopupPicker */,
 				1C8E394D1F26B683001388A4 /* Views */,
 				1C8E39471F26B082001388A4 /* ViewModels */,
 				1C02DEA91F24560F0069915B /* Extensions */,
@@ -191,6 +202,7 @@
 				1C02DEA51F244C0E0069915B /* LoginViewController.swift */,
 				1C9746DA1F267274009AD854 /* SignupViewController.swift */,
 				1CD3DDEA1F283BB600916CE3 /* CreateGroupViewController.swift */,
+				272959CA1F2851EC00F843C9 /* CreateEventViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -224,6 +236,7 @@
 				1C23A1721F27150C005BC8CE /* ExploreViewControllerExtensions.swift */,
 				1C54B7BB1F27FA850076DA1C /* PendingViewControllerExtensions.swift */,
 				1C54B7C11F2801F50076DA1C /* AcceptedViewControllerExtensions.swift */,
+				27F8650A1F287F5F0058DE9D /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -268,6 +281,16 @@
 				1C54B7BF1F2801CA0076DA1C /* AcceptedEventCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		27F865031F287D8E0058DE9D /* PopupPicker */ = {
+			isa = PBXGroup;
+			children = (
+				27F865041F287DA40058DE9D /* PopDatePicker.swift */,
+				27F865061F287DAE0058DE9D /* PopDateViewController.swift */,
+				27F865071F287DAE0058DE9D /* PopDateViewController.xib */,
+			);
+			path = PopupPicker;
 			sourceTree = "<group>";
 		};
 		3BFD09A4B0FA723367DBCB05 /* Pods */ = {
@@ -380,6 +403,7 @@
 				1C8E39591F26BE5C001388A4 /* UserInfoTableViewCell.xib in Resources */,
 				1C8E395D1F26C058001388A4 /* GroupTableViewCell.xib in Resources */,
 				1C02DEA21F243F1A0069915B /* TODO.txt in Resources */,
+				27F865091F287DAE0058DE9D /* PopDateViewController.xib in Resources */,
 				1C02DE7F1F24341C0069915B /* LaunchScreen.storyboard in Resources */,
 				1C02DE7C1F24341C0069915B /* Assets.xcassets in Resources */,
 				1C02DE7A1F24341C0069915B /* Main.storyboard in Resources */,
@@ -502,21 +526,25 @@
 				1C54B7BE1F27FDD50076DA1C /* PendingEventCollectionViewCell.swift in Sources */,
 				1C8E39581F26BE5C001388A4 /* UserInfoTableViewCell.swift in Sources */,
 				1CD3DDEB1F283BB600916CE3 /* CreateGroupViewController.swift in Sources */,
+				27F865051F287DA40058DE9D /* PopDatePicker.swift in Sources */,
 				1C02DE9F1F243EBF0069915B /* Authentication.swift in Sources */,
 				1C02DE771F24341C0069915B /* PendingViewController.swift in Sources */,
 				1C02DE731F24341C0069915B /* AppDelegate.swift in Sources */,
 				1C47C9421F27117B00D6316F /* ExploreEventCollectionViewCell.swift in Sources */,
 				1C02DEAF1F245D6F0069915B /* AuthenticationDTO.swift in Sources */,
 				1C02DEAC1F245D090069915B /* JPHttpClient.swift in Sources */,
+				272959CB1F2851EC00F843C9 /* CreateEventViewController.swift in Sources */,
 				1C8E395C1F26C058001388A4 /* GroupTableViewCell.swift in Sources */,
 				1C8E393C1F26A612001388A4 /* Group.swift in Sources */,
 				1C54B7BC1F27FA850076DA1C /* PendingViewControllerExtensions.swift in Sources */,
 				1C02DE971F24358A0069915B /* ProfileViewController.swift in Sources */,
+				27F8650B1F287F5F0058DE9D /* DateExtensions.swift in Sources */,
 				1C8E395F1F26C50E001388A4 /* ProfileViewModelExtension.swift in Sources */,
 				1C02DEA41F2441A70069915B /* User.swift in Sources */,
 				1C9746DB1F267274009AD854 /* SignupViewController.swift in Sources */,
 				1C028B991F270C8D00517033 /* Event.swift in Sources */,
 				1C8E39421F26AE51001388A4 /* ProfileViewModelItemExtension.swift in Sources */,
+				27F865081F287DAE0058DE9D /* PopDateViewController.swift in Sources */,
 				1C8E39491F26B0AA001388A4 /* ProfileViewModel.swift in Sources */,
 				1C8E393E1F26ACB2001388A4 /* ProfileViewModelItemType.swift in Sources */,
 				1C02DE751F24341C0069915B /* ExploreViewController.swift in Sources */,
