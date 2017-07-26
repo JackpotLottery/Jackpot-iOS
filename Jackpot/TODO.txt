@@ -11,3 +11,7 @@ Profile Page:
 
 Models
     Should probably make all properties optionals
+
+
+Create Group
+ Description shouldn't be shown if joining group

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopPickerViewController" customModule="Jackpot" customModuleProvider="target">
+            <connections>
+                <outlet property="picker" destination="A89-ke-P6z" id="ZB1-f9-lzR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gX6-ZV-cOI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A89-ke-P6z">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="162" id="2Ke-hG-gKT"/>
+                            </constraints>
+                        </pickerView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCE-MC-Ft6">
+                            <rect key="frame" x="172.5" y="169" width="30" height="30"/>
+                            <state key="normal" title="OK">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="okClicked:" destination="-1" eventType="touchUpInside" id="OdV-zu-sad"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="7mq-h5-anL"/>
+                        <constraint firstItem="QCE-MC-Ft6" firstAttribute="top" secondItem="A89-ke-P6z" secondAttribute="bottom" constant="7" id="JAO-Fa-sgi"/>
+                        <constraint firstItem="A89-ke-P6z" firstAttribute="top" secondItem="gX6-ZV-cOI" secondAttribute="top" id="POB-KJ-oNB"/>
+                        <constraint firstAttribute="trailing" secondItem="A89-ke-P6z" secondAttribute="trailing" id="S57-Oc-uqf"/>
+                        <constraint firstItem="A89-ke-P6z" firstAttribute="leading" secondItem="gX6-ZV-cOI" secondAttribute="leading" id="fRy-uN-c2z"/>
+                        <constraint firstAttribute="centerX" secondItem="QCE-MC-Ft6" secondAttribute="centerX" id="ryn-nQ-obP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gX6-ZV-cOI" secondAttribute="trailing" id="8jR-Dr-F6c"/>
+                <constraint firstItem="gX6-ZV-cOI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F2p-im-1SA"/>
+                <constraint firstItem="gX6-ZV-cOI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XlK-Lo-uGd"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -17,6 +17,8 @@ class CreateGroupViewController: UIViewController, UITextFieldDelegate, UITextVi
 		@IBOutlet weak var descriptionTextView: UITextView!
 		@IBOutlet weak var errorLabel: UILabel!
 	
+	@IBAction func joinGroupButtonClicked(_ sender: UIButton) {
+	}
 	
 		@IBAction func createGroupButtonClicked(_ sender: UIButton) {
 			// Remove focus from the text fields.
