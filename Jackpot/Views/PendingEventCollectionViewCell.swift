@@ -1,26 +1,26 @@
 //
-//  ExploreEventCollectionViewCell.swift
+//  PendingEventCollectionViewCell.swift
 //  Jackpot
 //
-//  Created by bradley treuherz on 7/24/17.
+//  Created by bradley treuherz on 7/25/17.
 //  Copyright © 2017 self. All rights reserved.
 //
 
 import UIKit
 
-class ExploreEventCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
+class PendingEventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var groupLabel: UILabel!
+    
+    @IBOutlet weak var closingDateLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    
-    @IBAction func applyButtonClicked(_ sender: Any) {
-    }
     
     var item: Event? {
         didSet {
@@ -52,10 +52,21 @@ class ExploreEventCollectionViewCell: UICollectionViewCell {
                 
                 let dateSplit = dateString.components(separatedBy: " ")
                 if (dateSplit.count > 1){
-                    var day = dateSplit[1]
+                    let day = dateSplit[1]
                     dayLabel?.text = day.substring(to: day.index(before: day.endIndex))
                 }
             }
+            
+            // Set the closing date
+            if let date = item.expirationDate as Date?{
+                let formatter = DateFormatter()
+                formatter.dateStyle = .long
+                formatter.timeStyle = .medium
+                
+                let dateString = formatter.string(from: date)
+                closingDateLabel?.text = "Closing on " + dateString
+            }
+            
             
             // Set the group label
             groupLabel?.text = item.groupName

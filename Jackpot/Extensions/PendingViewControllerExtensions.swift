@@ -1,14 +1,14 @@
 //
-//  ExploreViewControllerExtensions.swift
+//  PendingViewControllerExtensions.swift
 //  Jackpot
 //
-//  Created by bradley treuherz on 7/24/17.
+//  Created by bradley treuherz on 7/25/17.
 //  Copyright © 2017 self. All rights reserved.
 //
 
 import UIKit
 
-extension ExploreViewController: UICollectionViewDataSource {
+extension PendingViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return events.count
     }
@@ -17,14 +17,13 @@ extension ExploreViewController: UICollectionViewDataSource {
         let item = events[indexPath.row]
         
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExploreEventCollectionViewCell", for: indexPath) as? ExploreEventCollectionViewCell{
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PendingEventCollectionViewCell", for: indexPath) as? PendingEventCollectionViewCell{
             
             cell.item = item
             return cell
         }
-                
+        
         return UICollectionViewCell()
     }
     
 }
-

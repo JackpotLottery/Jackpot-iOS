@@ -1,14 +1,15 @@
 //
-//  ExploreEventCollectionViewCell.swift
+//  ApprovedEventCollectionViewCell.swift
 //  Jackpot
 //
-//  Created by bradley treuherz on 7/24/17.
+//  Created by bradley treuherz on 7/25/17.
 //  Copyright © 2017 self. All rights reserved.
 //
 
 import UIKit
 
-class ExploreEventCollectionViewCell: UICollectionViewCell {
+class AcceptedEventCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
@@ -17,10 +18,6 @@ class ExploreEventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
-    
-    @IBAction func applyButtonClicked(_ sender: Any) {
-    }
     
     var item: Event? {
         didSet {
@@ -52,7 +49,7 @@ class ExploreEventCollectionViewCell: UICollectionViewCell {
                 
                 let dateSplit = dateString.components(separatedBy: " ")
                 if (dateSplit.count > 1){
-                    var day = dateSplit[1]
+                    let day = dateSplit[1]
                     dayLabel?.text = day.substring(to: day.index(before: day.endIndex))
                 }
             }

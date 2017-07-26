@@ -4,7 +4,7 @@ Login screen:
     Put a mutex on the thing that launches the login page.. don't want it getting launched more than once
 
 Profile Page:
-    GroupTableViewCell will not resize if description is long.
+    Clicking on groups should drop down detail view with name and password
     GetGroups Endpoint.
     Create group button does nothing.
 

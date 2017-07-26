@@ -41,9 +41,9 @@ class ProfileViewModel: NSObject {
     
     private func getGroups() -> [Group]?{
         // TODO: Call Server to get groups
-        return [Group(_id: "0", name: "Group 1", description: "The best group ever made!"),
-                Group(_id: "2", name: "Group 3", description: "Yall are tripping this group is way better than yours. I'm gonna make the text for this one super long that way I can see what it looks like. Does it wrap? Does it overflow? Who knows lets find out yo."),
-                Group(_id: "1", name: "Group 2", description: "Nah brah this is the best group ever made!")
-                ]
+        return [Group(_id: "0", name: "Group 1", description: "The best group ever made!", password: "FortKnox"),
+                Group(_id: "2", name: "Group 3", description: "Yall are tripping this group is way better than yours. I'm gonna make the text for this one super long that way I can see what it looks like. Does it wrap? Does it overflow? Who knows lets find out yo.", password: "asdf"),
+                Group(_id: "1", name: "Group 2", description: "Nah brah this is the best group ever made!", password: "123456")
+        ]
     }
 }

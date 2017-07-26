@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Helvetica.ttc">
-            <string>Helvetica</string>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
         </array>
     </customFonts>
     <objects>
@@ -49,15 +49,21 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNt-sm-NzD">
-                        <rect key="frame" x="44" y="11" width="231" height="21"/>
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNt-sm-NzD">
+                        <rect key="frame" x="79" y="12" width="231" height="0.0"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjN-8G-uV7">
-                        <rect key="frame" x="44" y="11" width="231" height="21"/>
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjN-8G-uV7">
+                        <rect key="frame" x="79" y="16" width="231" height="11.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaU-Tx-mCJ">
+                        <rect key="frame" x="79" y="33.5" width="231" height="0.0"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -66,10 +72,13 @@
                     <constraint firstItem="WNt-sm-NzD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="3SS-dg-cCI"/>
                     <constraint firstItem="fjN-8G-uV7" firstAttribute="leading" secondItem="fIq-Bq-RYs" secondAttribute="trailing" constant="15" id="AyD-lU-8rk"/>
                     <constraint firstItem="WNt-sm-NzD" firstAttribute="leading" secondItem="fIq-Bq-RYs" secondAttribute="trailing" constant="15" id="FHo-6H-cik"/>
-                    <constraint firstAttribute="bottom" secondItem="fjN-8G-uV7" secondAttribute="bottom" constant="20" id="Khm-nI-rSs"/>
+                    <constraint firstItem="CaU-Tx-mCJ" firstAttribute="leading" secondItem="fIq-Bq-RYs" secondAttribute="trailing" constant="15" id="RV9-Ic-iEV"/>
                     <constraint firstItem="fIq-Bq-RYs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="UrJ-4j-AoA"/>
                     <constraint firstAttribute="trailing" secondItem="fjN-8G-uV7" secondAttribute="trailing" constant="10" id="Vwc-ZI-T6a"/>
+                    <constraint firstItem="CaU-Tx-mCJ" firstAttribute="top" secondItem="fjN-8G-uV7" secondAttribute="bottom" constant="6" id="d8t-iY-5S5"/>
                     <constraint firstItem="fIq-Bq-RYs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ev3-Le-io1"/>
+                    <constraint firstAttribute="trailing" secondItem="CaU-Tx-mCJ" secondAttribute="trailing" constant="10" id="hre-Hc-X0i"/>
+                    <constraint firstAttribute="bottom" secondItem="CaU-Tx-mCJ" secondAttribute="bottom" constant="10" id="nx2-Te-Zwf"/>
                     <constraint firstItem="fjN-8G-uV7" firstAttribute="top" secondItem="WNt-sm-NzD" secondAttribute="bottom" constant="4" id="tQl-Xq-wJO"/>
                     <constraint firstAttribute="trailing" secondItem="WNt-sm-NzD" secondAttribute="trailing" constant="10" id="zrp-Nm-7t2"/>
                 </constraints>
@@ -77,6 +86,7 @@
             <connections>
                 <outlet property="descriptionTextLabel" destination="fjN-8G-uV7" id="svd-uL-mDm"/>
                 <outlet property="nameTextLabel" destination="WNt-sm-NzD" id="4PR-PK-ZAC"/>
+                <outlet property="passwordLabel" destination="CaU-Tx-mCJ" id="Sfu-Ml-mdV"/>
             </connections>
         </tableViewCell>
     </objects>

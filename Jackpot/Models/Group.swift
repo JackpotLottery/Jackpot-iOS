@@ -12,12 +12,14 @@ class Group: NSObject {
     var _id: String
     var name: String
     var groupDescription: String
+    var password: String?
     // TODO: add photo URL Eventually
     
-    init(_id: String, name: String, description: String){
+    init(_id: String, name: String, description: String, password: String?){
         self._id = _id
         self.name = name
         self.groupDescription = description
+        self.password = password
     }
     
     // TODO: Implement create from Json method

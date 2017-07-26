@@ -16,14 +16,20 @@ class ProfileViewController: UIViewController {
     // MARK: Actions
     @IBAction func logoutButtonClicked(_ sender: UIButton) {
         Authentication.logout()
-        Authentication.verifyIsLoggedIn(self, complete: onSignIn)
+        Authentication.verifyIsLoggedIn(self, complete: reloadData)
     }
     
     private var viewModel: ProfileViewModel = ProfileViewModel()
     
-    private func onSignIn(){
+    private func reloadData(){
         viewModel.fetchData()
         profileTableView.reloadData()
+    }
+    @IBAction func onCreateGroupClicked(_ sender: UIButton) {
+        let createGroupViewController = storyboard!.instantiateViewController(withIdentifier: "CreateGroupViewController") as! CreateGroupViewController
+        
+        createGroupViewController.onComplete = reloadData
+        present(createGroupViewController, animated:false, completion: nil)
     }
     
     override func viewDidLoad() {

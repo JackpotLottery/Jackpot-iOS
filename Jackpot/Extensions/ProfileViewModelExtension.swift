@@ -53,5 +53,26 @@ extension ProfileViewModel: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.section]
+        if item.type == .group, let cell = tableView.cellForRow(at: indexPath) as? GroupTableViewCell{
+            print(cell.passwordLabel.text)
+            if cell.passwordLabel?.text == nil || cell.passwordLabel?.text == "", let password = groups?[indexPath.row].password{
+                cell.passwordLabel?.text = "Password: " + password
+            }else{
+                cell.passwordLabel?.text = nil
+            }
+            tableView.reloadData()
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.section]
+        if item.type == .group, let cell = tableView.cellForRow(at: indexPath) as? GroupTableViewCell{
+            cell.passwordLabel?.text = nil
+        }
+    }
 }
 
