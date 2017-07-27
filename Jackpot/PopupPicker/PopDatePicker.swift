@@ -41,8 +41,9 @@ public class PopDatePicker : NSObject, UIPopoverPresentationControllerDelegate, 
         if let _popover = popover {
             
             _popover.sourceView = textField
-            _popover.sourceRect = CGRect(x: self.offset,y: textField.bounds.size.height,width: 0,height: 0)
+            _popover.sourceRect = CGRect(x: self.offset,y: inViewController.view.bounds.size.height,width: 0,height: 0)
             _popover.delegate = self
+            _popover.permittedArrowDirections = UIPopoverArrowDirection(rawValue:0)
             self.dataChanged = dataChanged
             inViewController.present(datePickerVC, animated: true, completion: nil)
             presented = true
