@@ -100,6 +100,15 @@ class CreateGroupViewController: UIViewController, UITextFieldDelegate, UITextVi
 			textView.resignFirstResponder()
 			return true
 		}
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        if text.elementsEqual("\n"){
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
 	
 		override func viewDidLoad() {
         super.viewDidLoad()

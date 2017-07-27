@@ -212,6 +212,15 @@ class CreateEventViewController: UITableViewController, UITextFieldDelegate, UIT
 		textView.resignFirstResponder()
 		return true
 	}
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        if text.elementsEqual("\n"){
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		resignAll()
