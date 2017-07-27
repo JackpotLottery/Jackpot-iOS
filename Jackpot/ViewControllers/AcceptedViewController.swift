@@ -10,178 +10,61 @@ import UIKit
 
 class AcceptedViewController: UIViewController {
     var events = [Event]()
+		var groups = [Group]()
+		var httpClient = JPHttpClient()
+	
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
-    
+	
+		private func reloadData(){
+			fetchData(completion: collectionView.reloadData)
+		}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
         collectionView.dataSource = self
         flowLayout.itemSize.width = view.bounds.width - 20
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // Load the data
-        fetchData()
-        collectionView.reloadData()
+        reloadData()
     }
     
-    private func fetchData(){
-        // TODO: Make a network request
-        events = [Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders"),
-                  Event(_id: "0",
-                        name: "A fun event!",
-                        eventDescription: "Event Description",
-                        groupName: "Super fun group",
-                        location: "1234 W Road St, Seattle, WA, 89716",
-                        date: NSDate(),
-                        expirationDate: NSDate(),
-                        capacity: 50,
-                        requestedUsers: [String](),
-                        acceptedUsers: [String](),
-                        tag: "Sounders")
-            
-        ]
+    private func fetchData(completion: @escaping (() -> Void)){
+			// Clear existing dat
+			events.removeAll()
+			
+			// Get the data
+			guard let user = Authentication.getUser() else{
+				return
+			}
+			
+			httpClient.getGroups(user: user, completion: { (result: GroupsDTO?) in
+				guard let result = result, let success = result.success, success, let _groups = result.groups else{
+					return
+				}
+				if (!_groups.isEmpty){
+					self.groups = _groups
+					let groupNames = _groups.map({ (group) -> String in
+						group._id
+					});
+					
+					let groupString = groupNames.joined(separator: ",")
+					
+					self.httpClient.getAcceptedEvents(user: user, groups: groupString, completion: { (result: EventsDTO?) in
+						guard let result = result, let success = result.success, success, let _events = result.events else{
+							return
+						}
+						if (!_events.isEmpty){
+							self.events = _events
+							completion()
+						}
+					})
+				}
+			})
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

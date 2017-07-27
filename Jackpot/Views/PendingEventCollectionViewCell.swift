@@ -57,7 +57,7 @@ class PendingEventCollectionViewCell: UICollectionViewCell {
                 }
             }
             
-            // Set the closing date
+					// Set the closing date
             if let date = item.expirationDate as Date?{
                 let formatter = DateFormatter()
                 formatter.dateStyle = .long

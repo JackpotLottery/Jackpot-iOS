@@ -15,3 +15,9 @@ Models
 
 Create Group
  Description shouldn't be shown if joining group
+
+Respond when a request is made and a token is not valid and launch the login page
+
+When no data is available, should show text that says "No events/ groups whatever found"
+
+Show event capacity on cards

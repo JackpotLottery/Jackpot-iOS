@@ -18,6 +18,34 @@ class CreateGroupViewController: UIViewController, UITextFieldDelegate, UITextVi
 		@IBOutlet weak var errorLabel: UILabel!
 	
 	@IBAction func joinGroupButtonClicked(_ sender: UIButton) {
+		// Remove focus from the text fields.
+		groupNameTextField.resignFirstResponder()
+		passwordTextField.resignFirstResponder()
+		descriptionTextView.resignFirstResponder()
+		
+		// Get the text field values
+		guard let user = Authentication.getUser(), let name = groupNameTextField.text, let password = passwordTextField.text else {
+			return
+		}
+		
+		// Validate the fields
+		if (name == "" || password == ""){
+			errorLabel.text = "Must provide a value for all fields."
+			return
+		}
+		
+		// Make the request
+		httpClient?.postJoinGroup(user: user, name: name, password: password, completion: { (result: GroupDTO?) in
+			guard let result = result else{
+				self.errorLabel.text = "Join group failed."
+				return
+			}
+			guard let success = result.success, success else{
+				self.errorLabel.text = result.message
+				return
+			}
+			self.dismiss(animated: true, completion: self.onComplete)
+		})
 	}
 	
 		@IBAction func createGroupButtonClicked(_ sender: UIButton) {
@@ -27,7 +55,7 @@ class CreateGroupViewController: UIViewController, UITextFieldDelegate, UITextVi
 			descriptionTextView.resignFirstResponder()
 			
 			// Get the text field values
-			guard let name = groupNameTextField.text, let password = passwordTextField.text, let description = descriptionTextView.text else {
+			guard let user = Authentication.getUser(), let name = groupNameTextField.text, let password = passwordTextField.text, let description = descriptionTextView.text else {
 				return
 			}
 			
@@ -37,25 +65,18 @@ class CreateGroupViewController: UIViewController, UITextFieldDelegate, UITextVi
 				return
 			}
 			
-			// Make the signup request
-//			httpClient?.postCreateGroup(name: name, email: email, password: password, completion: { (result: AuthenticationDTO?) in
-//				guard let result = result else{
-//					self.errorTextLabel.text = "Authentication failed."
-//					return
-//				}
-//				guard let success = result.success, success else{
-//					self.errorTextLabel.text = result.message
-//					return
-//				}
-//
-//				if let user = result.user{
-//					Authentication.setUser(user: user)
-//					self.dismiss(animated: false, completion: self.onComplete)
-//				} else{
-//					self.errorTextLabel.text = "Failed to get user info."
-//				}
-//			})
-			self.dismiss(animated: true, completion: onComplete)
+			// Make the request
+			httpClient?.postCreateGroup(user: user, name: name, password: password, description: description, completion: { (result: GroupDTO?) in
+				guard let result = result else{
+					self.errorLabel.text = "Create Group Failed."
+					return
+				}
+				guard let success = result.success, success else{
+					self.errorLabel.text = result.message
+					return
+				}
+				self.dismiss(animated: true, completion: self.onComplete)
+			})
 		}
 		@IBAction func cancelButtonClicked(_ sender: UIButton) {
 			self.dismiss(animated: true, completion: nil)

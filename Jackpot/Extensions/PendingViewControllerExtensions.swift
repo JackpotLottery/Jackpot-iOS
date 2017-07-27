@@ -14,13 +14,24 @@ extension PendingViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = events[indexPath.row]
+			if(indexPath.row >= events.count){
+				return UICollectionViewCell()
+			}
+			
+			let item = events[indexPath.row]
         
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PendingEventCollectionViewCell", for: indexPath) as? PendingEventCollectionViewCell{
             
             cell.item = item
-            return cell
+					
+					let group = groups.first(where: { (g) -> Bool in
+						g._id == item.groupID
+					})
+					if let group = group{
+						cell.groupLabel?.text = "Hosted by " + group.name
+					}
+					 return cell
         }
         
         return UICollectionViewCell()

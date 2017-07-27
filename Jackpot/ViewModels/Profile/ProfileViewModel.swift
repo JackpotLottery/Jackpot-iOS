@@ -9,6 +9,7 @@
 import UIKit
 
 class ProfileViewModel: NSObject {
+		var httpClient = JPHttpClient()
     var items = [ProfileViewModelItem]()
     var user: User?
     var groups: [Group]?
@@ -17,33 +18,31 @@ class ProfileViewModel: NSObject {
         super.init()
     }
     
-    func fetchData(){
+	func fetchData(completion: @escaping (() -> Void)){
         // Clear existing dat
         items.removeAll()
         
         // Get the data
-        user = Authentication.getUser()
-        groups = getGroups()
-        
-        // Unwrap it
-        guard let user = user, let groups = groups else{
-            return
-        }
-        
-        let userInfo = ProfileViewModelUserInfoItem(displayName: user.displayName, email: user.email)
-        items.append(userInfo)
-        
-        if (!groups.isEmpty){
-            let groupItems = ProfileViewModelGroupItem(groups: groups)
-            items.append(groupItems)
-        }
-    }
-    
-    private func getGroups() -> [Group]?{
-        // TODO: Call Server to get groups
-        return [Group(_id: "0", name: "Group 1", description: "The best group ever made!", password: "FortKnox"),
-                Group(_id: "2", name: "Group 3", description: "Yall are tripping this group is way better than yours. I'm gonna make the text for this one super long that way I can see what it looks like. Does it wrap? Does it overflow? Who knows lets find out yo.", password: "asdf"),
-                Group(_id: "1", name: "Group 2", description: "Nah brah this is the best group ever made!", password: "123456")
-        ]
+				guard let user = Authentication.getUser() else{
+					return
+				}
+			
+				let userInfo = ProfileViewModelUserInfoItem(displayName: user.displayName, email: user.email)
+				items.append(userInfo)
+			
+				httpClient.getGroups(user: user, completion: { (result: GroupsDTO?) in
+					guard let result = result, let success = result.success, success, let _groups = result.groups else{
+						return
+					}
+					
+					if (!_groups.isEmpty){
+						self.items.removeAll()
+						self.items.append(userInfo)
+						self.groups = _groups
+						let groupItems = ProfileViewModelGroupItem(groups: _groups)
+						self.items.append(groupItems)
+					}
+					completion()
+				})
     }
 }

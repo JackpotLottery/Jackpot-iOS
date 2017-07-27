@@ -26,7 +26,6 @@ class AuthenticationDTO: NSObject {
                 let json = try JSONSerialization.jsonObject(with: data) as? [String: Any] else{
                     return nil
             }
-            let blah = json["success"]
             let success = json["success"] as? Bool
             let message = json["message"] as? String
             let user = User.createFromJSON(json: json["user"] as? [String: Any]);

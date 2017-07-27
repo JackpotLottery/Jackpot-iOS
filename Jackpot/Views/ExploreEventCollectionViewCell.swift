@@ -17,9 +17,42 @@ class ExploreEventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+		@IBOutlet weak var applyButton: UIButton!
+		var isOwner = false
+		var httpClient = JPHttpClient()
+	var onComplete: ((_ event: Event?) -> Void)?
+	
     
     @IBAction func applyButtonClicked(_ sender: Any) {
+			if (isOwner){
+				// Make request to close registration
+				guard let user = Authentication.getUser(), let eventID = item?._id else{
+					return
+				}
+				
+				httpClient.postCloseEvent(user: user,eventID: eventID, completion: { (result: EventDTO?) in
+					guard let result = result, let success = result.success, success, let _ = result.event else{
+						return
+					}
+					
+					// Join suceeded. Need to remove
+					self.onComplete?(self.item)
+				})
+			} else{
+				// Make requst to join event
+				guard let user = Authentication.getUser(), let eventID = item?._id else{
+					return
+				}
+				
+				httpClient.postJoinEvent(user: user,eventID: eventID, completion: { (result: EventDTO?) in
+					guard let result = result, let success = result.success, success, let _ = result.event else{
+						return
+					}
+					
+					// Join suceeded. Need to remove
+					self.onComplete?(self.item)
+				})
+			}
     }
     
     var item: Event? {
@@ -65,6 +98,12 @@ class ExploreEventCollectionViewCell: UICollectionViewCell {
             
             // Set the description
             descriptionLabel?.text = item.eventDescription
+					
+						// Set the button label
+						applyButton?.setTitle("Apply", for: .normal)
+					
+						applyButton?.backgroundColor = UIColor(red: 0, green: 0.48, blue: 1.0, alpha: 0.77)
+						isOwner = false
         }
     }
     

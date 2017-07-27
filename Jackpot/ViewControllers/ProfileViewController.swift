@@ -22,8 +22,7 @@ class ProfileViewController: UIViewController {
     private var viewModel: ProfileViewModel = ProfileViewModel()
     
     private func reloadData(){
-        viewModel.fetchData()
-        profileTableView.reloadData()
+			viewModel.fetchData(completion: profileTableView.reloadData)
     }
     @IBAction func onCreateGroupClicked(_ sender: UIButton) {
         let createGroupViewController = storyboard!.instantiateViewController(withIdentifier: "CreateGroupViewController") as! CreateGroupViewController
@@ -50,8 +49,7 @@ class ProfileViewController: UIViewController {
         super.viewDidAppear(animated)
         
         // Load the data
-        viewModel.fetchData()
-        profileTableView.reloadData()
+        viewModel.fetchData(completion: profileTableView.reloadData)
     }
 
     override func didReceiveMemoryWarning() {

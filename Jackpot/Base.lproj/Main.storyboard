@@ -133,9 +133,6 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                             <real key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
@@ -191,7 +188,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is a descripion of the event. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsr-c6-34J">
-                                                    <rect key="frame" x="12" y="420" width="325" height="16.5"/>
+                                                    <rect key="frame" x="15" y="420" width="322" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -204,9 +201,10 @@
                                             <constraint firstItem="dQY-AY-SEx" firstAttribute="top" secondItem="2MB-3Y-oAq" secondAttribute="bottom" constant="10" id="6HD-tt-gIJ"/>
                                             <constraint firstItem="4gE-HC-hsp" firstAttribute="top" secondItem="dQY-AY-SEx" secondAttribute="bottom" constant="4" id="75A-d8-Mzp"/>
                                             <constraint firstItem="4gE-HC-hsp" firstAttribute="leading" secondItem="U9r-if-Tos" secondAttribute="trailing" constant="10" id="AOw-ld-7jv"/>
+                                            <constraint firstItem="Wbv-Cg-Tmw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kE3-Zq-9hH" secondAttribute="bottom" constant="18" id="AVx-Eg-yvd"/>
                                             <constraint firstItem="U9r-if-Tos" firstAttribute="top" secondItem="2MB-3Y-oAq" secondAttribute="bottom" constant="10" id="BXz-Lc-CcO"/>
                                             <constraint firstItem="Wbv-Cg-Tmw" firstAttribute="centerX" secondItem="kvu-9l-ifp" secondAttribute="centerX" id="DOA-n4-UEA"/>
-                                            <constraint firstItem="Xsr-c6-34J" firstAttribute="leading" secondItem="kvu-9l-ifp" secondAttribute="leading" constant="12" id="FCj-4w-90Q"/>
+                                            <constraint firstItem="Xsr-c6-34J" firstAttribute="leading" secondItem="kvu-9l-ifp" secondAttribute="leading" constant="15" id="FCj-4w-90Q"/>
                                             <constraint firstItem="4Oz-3A-r9G" firstAttribute="top" secondItem="Wbv-Cg-Tmw" secondAttribute="bottom" constant="15" id="Igk-ox-Rbg"/>
                                             <constraint firstItem="4Oz-3A-r9G" firstAttribute="leading" secondItem="kvu-9l-ifp" secondAttribute="leading" constant="10" id="OxP-Bu-CKq"/>
                                             <constraint firstAttribute="trailing" secondItem="Wbv-Cg-Tmw" secondAttribute="trailing" constant="30" id="RC8-Jh-9fd"/>
@@ -233,6 +231,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="addressLabel" destination="HEF-mf-Ve8" id="rih-jX-r1P"/>
+                                            <outlet property="applyButton" destination="Wbv-Cg-Tmw" id="EPm-c7-FXW"/>
                                             <outlet property="dateLabel" destination="PQS-3H-8Cn" id="Ley-9z-l2I"/>
                                             <outlet property="dayLabel" destination="kE3-Zq-9hH" id="UXS-uh-cfs"/>
                                             <outlet property="descriptionLabel" destination="Xsr-c6-34J" id="0wP-hu-Tgr"/>
@@ -411,7 +410,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is a descripion of the event. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8k-fp-iRj">
-                                                    <rect key="frame" x="12" y="421" width="325" height="16.5"/>
+                                                    <rect key="frame" x="15" y="421" width="322" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -438,10 +437,11 @@
                                             <constraint firstItem="GwD-0R-LyQ" firstAttribute="leading" secondItem="v2y-PL-5Gm" secondAttribute="trailing" constant="10" id="17p-Z6-lIS"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="L8k-fp-iRj" secondAttribute="bottom" constant="8" id="6a6-4H-C1H"/>
                                             <constraint firstItem="GwD-0R-LyQ" firstAttribute="top" secondItem="x82-Zr-t3n" secondAttribute="bottom" constant="10" id="7XX-9d-dh9"/>
+                                            <constraint firstItem="vQn-xD-Zax" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4wt-DK-Tc0" secondAttribute="bottom" constant="18" id="GYg-uR-uE2"/>
                                             <constraint firstItem="0au-pn-fDg" firstAttribute="leading" secondItem="Zqd-I3-KER" secondAttribute="leading" constant="10" id="RA5-9s-nex"/>
                                             <constraint firstItem="vQn-xD-Zax" firstAttribute="top" secondItem="cOr-W5-etZ" secondAttribute="bottom" constant="20" id="RXs-g3-gP9"/>
                                             <constraint firstItem="L8k-fp-iRj" firstAttribute="top" secondItem="0au-pn-fDg" secondAttribute="bottom" constant="6" id="SCq-vp-JDp"/>
-                                            <constraint firstItem="L8k-fp-iRj" firstAttribute="leading" secondItem="Zqd-I3-KER" secondAttribute="leading" constant="12" id="UnR-BV-GRC"/>
+                                            <constraint firstItem="L8k-fp-iRj" firstAttribute="leading" secondItem="Zqd-I3-KER" secondAttribute="leading" constant="15" id="UnR-BV-GRC"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="L8k-fp-iRj" secondAttribute="trailing" constant="10" id="VHi-tK-IQS"/>
                                             <constraint firstAttribute="trailing" secondItem="cOr-W5-etZ" secondAttribute="trailing" constant="10" id="Zu0-l4-oJV"/>
                                             <constraint firstItem="x82-Zr-t3n" firstAttribute="top" secondItem="Zqd-I3-KER" secondAttribute="top" constant="12" id="aiQ-Xd-Qpp"/>
@@ -891,7 +891,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is a descripion of the event. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBh-aF-ufJ">
-                                                    <rect key="frame" x="12" y="420.5" width="325" height="16.5"/>
+                                                    <rect key="frame" x="15" y="420.5" width="322" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -925,7 +925,7 @@
                                             <constraint firstItem="ydf-h3-m60" firstAttribute="leading" secondItem="OvC-2x-Gfo" secondAttribute="leading" constant="12" id="Msb-oa-bSW"/>
                                             <constraint firstItem="hMT-lr-SaA" firstAttribute="leading" secondItem="OvC-2x-Gfo" secondAttribute="leading" constant="10" id="QlQ-MT-MqZ"/>
                                             <constraint firstAttribute="trailing" secondItem="jEw-h2-V4T" secondAttribute="trailing" constant="10" id="VzE-eE-ox2"/>
-                                            <constraint firstItem="CBh-aF-ufJ" firstAttribute="leading" secondItem="OvC-2x-Gfo" secondAttribute="leading" constant="12" id="Wmt-6K-aKB"/>
+                                            <constraint firstItem="CBh-aF-ufJ" firstAttribute="leading" secondItem="OvC-2x-Gfo" secondAttribute="leading" constant="15" id="Wmt-6K-aKB"/>
                                             <constraint firstAttribute="trailing" secondItem="YxK-eP-fhy" secondAttribute="trailing" constant="30" id="Y4m-Wm-I5A"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CBh-aF-ufJ" secondAttribute="bottom" constant="8" id="b4X-bz-iKf"/>
                                             <constraint firstItem="uf9-fP-A0X" firstAttribute="top" secondItem="ydf-h3-m60" secondAttribute="bottom" constant="10" id="dvI-Os-XmO"/>
@@ -933,6 +933,7 @@
                                             <constraint firstAttribute="trailing" secondItem="hMT-lr-SaA" secondAttribute="trailing" constant="10" id="fVO-sP-KBh"/>
                                             <constraint firstItem="jEw-h2-V4T" firstAttribute="top" secondItem="GIF-G5-XpL" secondAttribute="bottom" constant="4" id="fbu-Ws-1vT"/>
                                             <constraint firstAttribute="trailing" secondItem="GIF-G5-XpL" secondAttribute="trailing" constant="10" id="k5B-dj-HfX"/>
+                                            <constraint firstItem="YxK-eP-fhy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8GD-FM-C5M" secondAttribute="bottom" constant="18" id="m0k-oJ-fu7"/>
                                             <constraint firstAttribute="trailing" secondItem="ydf-h3-m60" secondAttribute="trailing" constant="12" id="nRI-a4-YK4"/>
                                             <constraint firstItem="ydf-h3-m60" firstAttribute="top" secondItem="OvC-2x-Gfo" secondAttribute="top" constant="12" id="ssI-93-jef"/>
                                             <constraint firstItem="hMT-lr-SaA" firstAttribute="top" secondItem="RGA-v7-Qac" secondAttribute="bottom" constant="4" id="w5q-IX-0aC"/>
@@ -1120,7 +1121,7 @@
                                         <rect key="frame" x="25" y="17" width="325" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="2"/>
@@ -1143,7 +1144,7 @@
                                         <rect key="frame" x="25" y="74" width="325" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="2"/>
@@ -1156,7 +1157,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU2-bF-ME8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description (not needed to join)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU2-bF-ME8">
                                         <rect key="frame" x="25" y="114" width="325" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
@@ -1167,7 +1168,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration" hint="Enter a description of your group"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="2"/>
@@ -1258,7 +1259,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="createGroupButtonClicked:" destination="TVB-eQ-6b5" eventType="touchUpInside" id="HK4-GC-Ao7"/>
                                     <action selector="joinGroupButtonClicked:" destination="TVB-eQ-6b5" eventType="touchUpInside" id="AS8-C6-IT4"/>
                                 </connections>
                             </button>

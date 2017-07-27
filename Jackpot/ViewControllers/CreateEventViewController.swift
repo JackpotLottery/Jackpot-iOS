@@ -23,19 +23,22 @@ class CreateEventViewController: UITableViewController, UITextFieldDelegate, UIT
 	private var date: Date?
 	private var deadline: Date?
 	
-	private var httpClient: JPHttpClient?
+	private var httpClient = JPHttpClient()
 	public var onComplete: (() -> Void)?
 	
 	var eventDatePicker: PopDatePicker?
 	var registrationDeadlineDatePicker: PopDatePicker?
 	var groupPicker: PopPicker?
+	var groups = [Group]()
+	var groupNames = [String]()
 	
 	@IBAction func createEventButtonClicked(_ sender: UIButton) {
 		// Remove focus from the text fields.
 		resignAll()
 		
 		// Get the text field values
-		guard let name = nameTextField.text,
+		guard let user = Authentication.getUser(),
+			let name = nameTextField.text,
 			let location = locationTextField.text,
 			let date = date,
 			let group = groupTextField.text,
@@ -48,10 +51,17 @@ class CreateEventViewController: UITableViewController, UITextFieldDelegate, UIT
 			return
 		}
 		
+		// Find the groupID
+		let index = groupNames.index(of: group)
+		guard let _index = index, _index > -1 else{
+			return
+		}
+		let groupID = groups[_index]._id
+		
 		// Validate the fields
 		if (name == "" ||
 			location == "" ||
-			group == "" ||
+			groupID == "" ||
 			tag == "" ||
 			capacity == "" ||
 			description == "")
@@ -60,46 +70,54 @@ class CreateEventViewController: UITableViewController, UITextFieldDelegate, UIT
 			return
 		}
 		
-		// Make the signup request
-		//			httpClient?.postCreateGroup(name: name, email: email, password: password, completion: { (result: AuthenticationDTO?) in
-		//				guard let result = result else{
-		//					self.errorTextLabel.text = "Authentication failed."
-		//					return
-		//				}
-		//				guard let success = result.success, success else{
-		//					self.errorTextLabel.text = result.message
-		//					return
-		//				}
-		//
-		//				if let user = result.user{
-		//					Authentication.setUser(user: user)
-		//					self.dismiss(animated: false, completion: self.onComplete)
-		//				} else{
-		//					self.errorTextLabel.text = "Failed to get user info."
-		//				}
-		//			})
-		self.dismiss(animated: true, completion: onComplete)
+		// Make the request
+		httpClient.postCreateEvent(user: user, name: name, location: location, description: description, group: groupID, tag: tag, date: date, deadline: deadline, capacity: capacity, completion: { (result: EventDTO?) in
+			guard let result = result else{
+				self.errorLabel.text = "Failed to create group."
+				return
+			}
+			guard let success = result.success, success else{
+				self.errorLabel.text = result.message
+				return
+			}
+			// Create event succeeded
+			self.dismiss(animated: true, completion: self.onComplete)
+		})
 	}
 	
 	@IBAction func cancelButtonClicked(_ sender: Any) {
 		self.dismiss(animated: false, completion: nil)
 	}
 	
-	func getGroups(){
-		// TODO: Make network call
-		groupPicker?.setData(data: ["Group 1", "Group 2", "Group 3", "Group4", "Group 5"])
+	func fetchGroups(){
+		guard let user = Authentication.getUser() else{
+			return
+		}
+		httpClient.getMyGroups(user: user, completion: { (result: GroupsDTO?) in
+			guard let result = result, let success = result.success, success, let _groups = result.groups else{
+				return
+			}
+			
+			if (!_groups.isEmpty){
+				self.groups = _groups
+				self.groupNames = _groups.map({ (group) -> String in
+					group.name
+				});
+				
+				self.groupPicker?.setData(data: self.groupNames)
+			}
+		})
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		httpClient = JPHttpClient()
 		tableView.separatorStyle = .none
 		
 		// Setup Pickers
 		eventDatePicker = PopDatePicker(forTextField: dateTextField)
 		registrationDeadlineDatePicker = PopDatePicker(forTextField: deadlineTextField)
 		groupPicker = PopPicker(forTextField: groupTextField)
-		getGroups()
+		fetchGroups()
 		
 		// Setup Delegates
 		nameTextField.delegate = self
