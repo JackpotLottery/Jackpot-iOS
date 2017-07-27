@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class JPHttpClient: NSObject {
-    private let BASE_URL = "https://3c927f85.ngrok.io"
+    private let BASE_URL = "https://cfec77c4.ngrok.io"
 	
     func postLogin(email: String, password: String, completion: @escaping (AuthenticationDTO?) -> Void) -> Void {
         Alamofire.request(

@@ -1,9 +1,9 @@
 //
-//  DatePickerActionSheet.swift
-//  iDoctors
+//  PopDateViewController.swift
+//  Jackpot
 //
-//  Created by Valerio Ferrucci on 30/09/14.
-//  Copyright (c) 2014 Tabasoft. All rights reserved.
+//  Created by bradley treuherz on 7/27/17.
+//  Copyright © 2017 self. All rights reserved.
 //
 
 import UIKit
@@ -18,18 +18,18 @@ class PopDateViewController : UIViewController {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
     weak var delegate : DataPickerViewControllerDelegate?
-
+    
     var currentDate : Date? {
         didSet {
             updatePickerCurrentDate()
         }
     }
-
+    
     convenience init() {
-
+        
         self.init(nibName: "PopDateViewController", bundle: nil)
     }
-
+    
     private func updatePickerCurrentDate() {
         
         if let _currentDate = self.currentDate {
@@ -38,9 +38,7 @@ class PopDateViewController : UIViewController {
             }
         }
     }
-
-    @IBAction func okAction(_ sender: AnyObject) {
-        
+    @IBAction func okAction(_ sender: UIButton) {
         self.dismiss(animated: true) {
             
             let nsdate = self.datePicker.date
@@ -48,6 +46,7 @@ class PopDateViewController : UIViewController {
             
         }
     }
+ 
     
     override func viewDidLoad() {
         

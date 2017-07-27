@@ -1,16 +1,16 @@
 //
-//  DataPicker.swift
-//  iDoctors
+//  PopDatePicker.swift
+//  Jackpot
 //
-//  Created by Valerio Ferrucci on 30/09/14.
-//  Copyright (c) 2014 Tabasoft. All rights reserved.
+//  Created by bradley treuherz on 7/27/17.
+//  Copyright © 2017 self. All rights reserved.
 //
 
 import UIKit
 
 public class PopDatePicker : NSObject, UIPopoverPresentationControllerDelegate, DataPickerViewControllerDelegate {
     
-	public typealias PopDatePickerCallback = ((_ newDate : Date, _ forTextField : UITextField) ->())
+    public typealias PopDatePickerCallback = ((_ newDate : Date, _ forTextField : UITextField) ->())
     
     var datePickerVC : PopDateViewController
     var popover : UIPopoverPresentationController?
@@ -26,7 +26,7 @@ public class PopDatePicker : NSObject, UIPopoverPresentationControllerDelegate, 
         super.init()
     }
     
-	public func pick(_ inViewController : UIViewController, initDate : Date?, dataChanged : @escaping PopDatePickerCallback) {
+    public func pick(_ inViewController : UIViewController, initDate : Date?, dataChanged : @escaping PopDatePickerCallback) {
         
         if presented {
             return  // we are busy
@@ -62,9 +62,9 @@ public class PopDatePicker : NSObject, UIPopoverPresentationControllerDelegate, 
         if let _dataChanged = dataChanged {
             
             if let _date = date {
-            
-							_dataChanged(_date, textField)
-        
+                
+                _dataChanged(_date, textField)
+                
             }
         }
         presented = false
