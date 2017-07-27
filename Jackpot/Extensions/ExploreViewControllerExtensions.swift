@@ -45,7 +45,7 @@ extension ExploreViewController: UICollectionViewDataSource {
 							if (admin != nil){
 								cell.isOwner = true
 								cell.applyButton?.setTitle("Close Registration", for: .normal)
-								cell.applyButton.backgroundColor = UIColor.orange
+								cell.applyButton.backgroundColor = UIColor.red
 							}
 						}
 										
