@@ -10,7 +10,15 @@ import UIKit
 
 extension PendingViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return events.count
+			if (events.count > 0){
+				collectionView.backgroundView = nil
+			}else{
+				let noDataLabel = UILabel(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: collectionView.bounds.size.height))
+				noDataLabel.text = "No data available"
+				noDataLabel.textAlignment = .center
+				collectionView.backgroundView = noDataLabel
+			}
+			return events.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

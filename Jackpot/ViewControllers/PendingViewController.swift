@@ -36,6 +36,7 @@ class PendingViewController: UIViewController {
     private func fetchData(completion: @escaping (() -> Void)){
 			// Clear existing dat
 			events.removeAll()
+			groups.removeAll()
 			
 			// Get the data
 			guard let user = Authentication.getUser() else{
